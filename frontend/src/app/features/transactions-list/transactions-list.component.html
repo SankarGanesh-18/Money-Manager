@@ -1,0 +1,182 @@
+<div class="top">
+
+  <h2>
+
+      Transactions
+
+  </h2>
+
+  <a
+      routerLink="/transactions/add"
+      class="btn btn-primary"
+  >
+
+      Add Transaction
+
+  </a>
+
+</div>
+
+<div class="filters">
+
+  <input
+
+      type="text"
+
+      placeholder="Search"
+
+      [ngModel]="search()"
+
+      (ngModelChange)="search.set($event)"
+
+  >
+
+  <select
+
+      [ngModel]="category()"
+
+      (ngModelChange)="category.set($event)"
+
+  >
+
+      <option value="">
+
+          All Categories
+
+      </option>
+
+      @for(c of categories;track c){
+
+      <option [value]="c">
+
+          {{c}}
+
+      </option>
+
+      }
+
+  </select>
+
+  <select
+
+      [ngModel]="type()"
+
+      (ngModelChange)="type.set($event)"
+
+  >
+
+      <option value="">
+
+          All Types
+
+      </option>
+
+      <option value="income">
+
+          Income
+
+      </option>
+
+      <option value="expense">
+
+          Expense
+
+      </option>
+
+  </select>
+
+</div>
+
+<table>
+
+  <thead>
+
+      <tr>
+
+          <th>Date</th>
+
+          <th>Category</th>
+
+          <th>Description</th>
+
+          <th>Amount</th>
+
+          <th>Type</th>
+
+          <th>Action</th>
+
+      </tr>
+
+  </thead>
+
+  <tbody>
+
+      @for(transaction of transactions();track transaction._id){
+
+      <tr>
+
+          <td>
+
+              {{transaction.date|date}}
+
+          </td>
+
+          <td>
+
+              {{transaction.category}}
+
+          </td>
+
+          <td>
+
+              {{transaction.description}}
+
+          </td>
+
+          <td>
+
+              ₹ {{transaction.amount}}
+
+          </td>
+
+          <td>
+
+              {{transaction.type}}
+
+          </td>
+
+          <td>
+
+              <a
+
+                  [routerLink]="['/transactions/edit',transaction._id]"
+
+                  class="btn btn-warning"
+
+              >
+
+                  Edit
+
+              </a>
+
+              <button
+
+                  class="btn btn-danger"
+
+                  (click)="delete(transaction._id!)"
+
+              >
+
+                  Delete
+
+              </button>
+
+          </td>
+
+      </tr>
+
+      }
+
+  </tbody>
+
+</table>

@@ -1,0 +1,77 @@
+<div class="container">
+
+  
+    <div class="cards">
+  
+      <div class="card income">
+  
+        <h4>Total Income</h4>
+  
+        <h2>
+  
+          ₹ {{totalIncome()}}
+  
+        </h2>
+  
+      </div>
+  
+      <div class="card expense">
+  
+        <h4>Total Expense</h4>
+  
+        <h2>
+  
+          ₹ {{totalExpense()}}
+  
+        </h2>
+  
+      </div>
+  
+      <div class="card balance">
+  
+        <h4>Balance</h4>
+  
+        <h2>
+  
+          ₹ {{balance()}}
+  
+        </h2>
+  
+      </div>
+  
+    </div>
+    <br>
+  
+  
+    <div class="dashboard-bottom">
+  
+      <div class="chart-card">
+  
+        <h3>
+  
+          Spending Distribution
+  
+        </h3>
+  
+        <canvas
+  
+          id="expenseChart"
+  
+        >
+  
+        </canvas>
+  
+      </div>
+  
+  
+      <div class="reminder-card">
+  
+        <app-reminder>
+  
+        </app-reminder>
+  
+      </div>
+  
+    </div>
+  
+  </div>

@@ -1,0 +1,95 @@
+<div class="card">
+
+  <h2>
+  
+  {{editId?'Edit':'Add'}} Transaction
+  
+  </h2>
+  
+  <form
+  
+  [formGroup]="form"
+  
+  (ngSubmit)="save()"
+  
+  >
+  
+  <select formControlName="type">
+  
+  <option value="income">
+  
+  Income
+  
+  </option>
+  
+  <option value="expense">
+  
+  Expense
+  
+  </option>
+  
+  </select>
+  
+  <input
+  
+  type="number"
+  
+  placeholder="Amount"
+  
+  formControlName="amount"
+  
+  >
+  
+  <select formControlName="category">
+  
+  @for(category of categories;track category){
+  
+  <option [value]="category">
+  
+  {{category}}
+  
+  </option>
+  
+  }
+  
+  </select>
+  
+  <input
+  
+  type="text"
+  
+  placeholder="Description"
+  
+  formControlName="description"
+  
+  >
+  
+  <input
+  
+  type="date"
+  
+  formControlName="date"
+  
+  >
+  
+  <button class="btn btn-primary">
+  
+  {{editId?'Update':'Save'}}
+  
+  </button>
+  
+  <a
+  
+  routerLink="/transactions"
+  
+  class="btn btn-secondary"
+  
+  >
+  
+  Cancel
+  
+  </a>
+  
+  </form>
+  
+  </div>

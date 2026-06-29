@@ -1,0 +1,42 @@
+.top{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin:25px;
+
+}
+
+.filters{
+
+  display:flex;
+
+  gap:15px;
+
+  margin:25px;
+
+}
+
+.filters input,
+.filters select{
+
+  width:250px;
+
+}
+
+table{
+
+  width:95%;
+
+  margin:auto;
+
+}
+
+td,th{
+
+  padding:12px;
+
+}

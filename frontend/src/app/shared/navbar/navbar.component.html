@@ -1,0 +1,78 @@
+<nav>
+
+  <div class="logo">
+
+      Money Manager
+
+  </div>
+
+  <div class="links">
+
+      <a routerLink="/dashboard">
+
+          Dashboard
+
+      </a>
+
+      <a routerLink="/transactions">
+
+          Transactions
+
+      </a>
+
+  </div>
+
+  @if(auth.isLoggedIn()){
+
+  <div
+      class="profile"
+      (click)="stop($event)"
+  >
+
+      <div
+          class="avatar"
+          (click)="toggleMenu()"
+      >
+
+          {{initials}}
+
+      </div>
+
+      @if(showMenu){
+
+      <div class="dropdown">
+
+          <a routerLink="/profile">
+
+              View Profile
+
+          </a>
+
+          <button (click)="logout()">
+
+              Logout
+
+          </button>
+
+      </div>
+
+      }
+
+  </div>
+
+  }
+
+  @else{
+
+  <a
+      routerLink="/login"
+      class="signup"
+  >
+
+      Sign In
+
+  </a>
+
+  }
+
+</nav>

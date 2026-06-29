@@ -1,0 +1,145 @@
+.header{
+
+    display:flex;
+    
+    justify-content:space-between;
+    
+    align-items:center;
+    
+    margin-bottom:15px;
+    
+    }
+    
+    .add-btn{
+    
+    width:35px;
+    
+    height:35px;
+    
+    border:none;
+    
+    border-radius:50%;
+    
+    background:#0d6efd;
+    
+    color:white;
+    
+    cursor:pointer;
+    
+    font-size:20px;
+    
+    }
+    
+    .form{
+    
+    display:flex;
+    
+    flex-direction:column;
+    
+    gap:10px;
+    
+    margin-bottom:20px;
+    
+    }
+    
+    .form input{
+    
+    padding:10px;
+    
+    border:1px solid #ddd;
+    
+    border-radius:8px;
+    
+    }
+    
+    .form button{
+    
+    padding:10px;
+    
+    background:#198754;
+    
+    color:white;
+    
+    border:none;
+    
+    border-radius:8px;
+    
+    cursor:pointer;
+    
+    }
+    
+    .list{
+    
+    display:flex;
+    
+    flex-direction:column;
+    
+    gap:15px;
+    
+    }
+    
+    .item{
+    
+    display:flex;
+    
+    justify-content:space-between;
+    
+    align-items:center;
+    
+    padding:15px;
+    
+    border-radius:10px;
+    
+    background:#f8f9fa;
+    
+    transition:.3s;
+    
+    }
+    
+    .item.completed{
+    
+    opacity:.55;
+    
+    text-decoration:line-through;
+    
+    }
+    
+    .actions{
+    
+    display:flex;
+    
+    gap:10px;
+    
+    }
+    
+    .done{
+    
+    background:#198754;
+    
+    color:white;
+    
+    border:none;
+    
+    padding:8px 10px;
+    
+    border-radius:6px;
+    
+    cursor:pointer;
+    
+    }
+    
+    .delete{
+    
+    background:#dc3545;
+    
+    color:white;
+    
+    border:none;
+    
+    padding:8px 10px;
+    
+    border-radius:6px;
+    
+    cursor:pointer;
+    
+    }

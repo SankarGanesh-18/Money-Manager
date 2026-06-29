@@ -1,0 +1,135 @@
+nav{
+
+  height:70px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:0 40px;
+
+  background:#0d6efd;
+
+  color:white;
+
+}
+
+.logo{
+
+  font-size:22px;
+
+  font-weight:bold;
+
+}
+
+.links{
+
+  display:flex;
+
+  gap:25px;
+
+}
+
+.links a{
+
+  color:white;
+
+  text-decoration:none;
+
+}
+
+.signup{
+
+  color:white;
+
+  text-decoration:none;
+
+}
+
+.profile{
+
+  position:relative;
+
+}
+
+.avatar{
+
+  width:42px;
+
+  height:42px;
+
+  border-radius:50%;
+
+  background:white;
+
+  color:#0d6efd;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+}
+
+.dropdown{
+
+  position:absolute;
+
+  top:55px;
+
+  right:0;
+
+  width:180px;
+
+  background:white;
+
+  border-radius:8px;
+
+  box-shadow:0 0 8px rgba(0,0,0,.2);
+
+  overflow:hidden;
+
+}
+
+.dropdown a{
+
+  display:block;
+
+  padding:12px;
+
+  text-decoration:none;
+
+  color:black;
+
+}
+
+.dropdown button{
+
+  width:100%;
+
+  border:none;
+
+  background:white;
+
+  text-align:left;
+
+  padding:12px;
+
+  cursor:pointer;
+
+}
+
+.dropdown a:hover,
+
+.dropdown button:hover{
+
+  background:#f2f2f2;
+
+}

@@ -1,0 +1,50 @@
+<div class="login-container">
+
+  <div class="card">
+
+    <h2>Login</h2>
+
+    <p class="error">
+      {{error}}
+    </p>
+
+    <form
+      [formGroup]="form"
+      (ngSubmit)="login()"
+    >
+
+      <input
+        type="email"
+        placeholder="Email"
+        formControlName="email"
+      >
+
+      <input
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+      >
+
+      <button type="submit">
+
+        Login
+
+      </button>
+
+    </form>
+
+    <p>
+
+      New User?
+
+      <a routerLink="/register">
+
+        Register
+
+      </a>
+
+    </p>
+
+  </div>
+
+</div>

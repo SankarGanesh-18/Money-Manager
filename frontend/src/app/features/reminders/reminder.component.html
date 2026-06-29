@@ -1,0 +1,129 @@
+<div class="header">
+
+    <h3>
+
+        Monthly Reminders
+
+    </h3>
+
+    <button
+
+        class="add-btn"
+
+        (click)="showForm=!showForm">
+
+        +
+
+    </button>
+
+</div>
+
+
+@if(showForm){
+
+<form
+
+[formGroup]="form"
+
+(ngSubmit)="addReminder()"
+
+class="form">
+
+<input
+
+type="text"
+
+placeholder="Title"
+
+formControlName="title">
+
+
+<input
+
+type="number"
+
+placeholder="Amount"
+
+formControlName="amount">
+
+
+<input
+
+type="date"
+
+formControlName="dueDate">
+
+
+<button type="submit">
+
+Save
+
+</button>
+
+</form>
+
+}
+
+
+
+<div class="list">
+
+@for(reminder of reminders();track reminder._id){
+
+<div
+
+class="item"
+
+[class.completed]="reminder.completed">
+
+<div>
+
+<h5>
+
+{{reminder.title}}
+
+</h5>
+
+<p>
+
+₹ {{reminder.amount}}
+
+</p>
+
+<small>
+
+{{reminder.dueDate|date}}
+
+</small>
+
+</div>
+
+<div class="actions">
+
+<button
+
+class="done"
+
+(click)="toggleCompleted(reminder)">
+
+✔
+
+</button>
+
+<button
+
+class="delete"
+
+(click)="deleteReminder(reminder._id!)">
+
+🗑
+
+</button>
+
+</div>
+
+</div>
+
+}
+
+</div>

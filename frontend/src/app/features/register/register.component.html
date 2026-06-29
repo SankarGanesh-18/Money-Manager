@@ -1,0 +1,68 @@
+<div class="login-container">
+
+  <div class="card">
+
+      <h2>Create Account</h2>
+
+      <p class="error">
+          {{error}}
+      </p>
+
+      <form
+          [formGroup]="form"
+          (ngSubmit)="register()"
+      >
+
+          <input
+              type="text"
+              placeholder="First Name"
+              formControlName="firstName"
+          >
+
+          <input
+              type="text"
+              placeholder="Last Name"
+              formControlName="lastName"
+          >
+
+          <input
+              type="text"
+              placeholder="Phone Number"
+              formControlName="phone"
+          >
+
+          <input
+              type="email"
+              placeholder="Email"
+              formControlName="email"
+          >
+
+          <input
+              type="password"
+              placeholder="Password"
+              formControlName="password"
+          >
+
+          <button type="submit">
+
+              Register
+
+          </button>
+
+      </form>
+
+      <p>
+
+          Already have an account?
+
+          <a routerLink="/login">
+
+              Login
+
+          </a>
+
+      </p>
+
+  </div>
+
+</div>
